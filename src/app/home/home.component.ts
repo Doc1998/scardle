@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
   grayBlock = '⬛';
   outputlineOne = 'Exteme Worldle day x';
   outputlineTwo = this.row + 1 + '/6';
+  wordLost = '';
   ngOnInit(): void {
     document.addEventListener('keydown', (e) =>
       this.pressKey(e.key.toString()
@@ -106,7 +107,8 @@ export class HomeComponent implements OnInit {
         this.row++;
         if (this.row == 6) {
           this.hidePopup = false;
-          this.gameState = 'You Lost! The word was :' + wordchosen;
+          this.gameState = 'You Lost!';
+          this.wordLost =  'The word was' + ' ' + wordchosen;
         }
       }
     } else {
