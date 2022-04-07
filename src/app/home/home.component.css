@@ -16,7 +16,7 @@
   }
   .keyboard {
     display: block;
-    padding-top: 5rem;
+    padding-top: 4rem;
     width: fit-content;
     margin: auto;
     font-family: poppins;
@@ -60,8 +60,8 @@
   
     border: 1px solid grey;
   
-    width: 3rem;
-    height: 3rem;
+    width: 2.7rem;
+    height: 2.7rem;
   
     text-transform: capitalize;
   
@@ -95,8 +95,8 @@
   
     cursor: pointer;
   
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   
     border-radius: 5px;
   
@@ -159,11 +159,27 @@
   }
   @media (min-width: 1px) and (max-width: 819px) {
     .keyboard-button {
-      height: 3rem;
+      height: 2.5rem;
       width: 1.6rem;
     }
     .keyboard {
       padding-top: 2px;
+    }
+    .letter-cell{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    h1{
+       font-size: 1.5em;  
+    }
+    h4{
+        display: none;
+    }
+    h3{
+        font-size: 1em;
+    }
+    h5{
+        font-size: .67em;
     }
   }
   

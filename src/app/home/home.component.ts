@@ -83,6 +83,7 @@ export class HomeComponent implements OnInit {
   enter() {
     let guess = '';
     let wordchosen = this.word;
+    console.log(this.word);
     //console.log(this.word);
     let cells = document.querySelectorAll('.grid .letter-cell');
     let keys = document.querySelectorAll('.keyboard .keyboard-button');
