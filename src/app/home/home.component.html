@@ -6,8 +6,8 @@
     <h4 class="title">
         <span style="color: red;">6x</span> Harder than Wordle. Only <span style="color: red;">21%</span> of people can win this game
       </h4>
-    <h5 class="title"><span style="color: red;">TURN SOUND ON</span></h5>
-    <h3 class="title">
+    <h5 class="title"><span style="color: red;" *ngIf="!showShareBtn">TURN SOUND ON</span></h5>
+    <h3 class="title" *ngIf="!showShareBtn">
       <a
         style="padding:3px; border-radius: 5px; cursor: pointer; color: white; background-color: blue;"
         (click)="share()"
@@ -15,7 +15,7 @@
       >
     </h3>
   
-    <div class="center">
+    <div class="center" *ngIf="!showShareBtn">
       <div class="grid">
         <div class="letter-cell" *ngFor="let cell of grid">
           <h3 style="font-family: Arial, Helvetica, sans-serif;">{{ cell }}</h3>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="jumpscare" *ngIf="showScare"></div>
-    <div class="keyboard">
+    <div class="keyboard" *ngIf="!showShareBtn">
       <div class="center" *ngFor="let row of keyboard">
         <button
           class="keyboard-button"
@@ -52,7 +52,7 @@
         >
       </h3>
     </div>
-    <footer>
+    <footer *ngIf="!showShareBtn">
         <small>Contact: Acutisdev@gmail.com</small>
     </footer>
   </div>
