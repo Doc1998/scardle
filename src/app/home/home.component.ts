@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   orangeBlock = '🟧';
   blueBlock = '🟦';
   grayBlock = '⬛';
-  outputlineOne = 'Exteme Worldle day x';
+  outputlineOne = 'Scardle.com';
   outputlineTwo = this.row + 1 + '/6';
   wordLost = '';
   ngOnInit(): void {
@@ -179,7 +179,7 @@ export class HomeComponent implements OnInit {
   }
   share() {
     navigator.clipboard.writeText(
-      'Only 21% of people can win this extreme version of Wordle. Play now to see if you have the brains to compete : https://exwordle.com '
+      'Only 21% of people can win this extreme version of Wordle. Play now to see if you have the brains to compete : https://scardle.com '
     );
     this.toastr.success('Copied to clipboard');
   }
