@@ -1,6 +1,9 @@
 # Scardle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Site is - > Scardle.com.
+
+Just a copy of Wordle with a screamer thrown in for the laugh.
+
 
 ## Development server
 
