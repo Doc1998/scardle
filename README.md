@@ -2,7 +2,7 @@
 
 Site is - > Scardle.com.
 
-Just a copy of Wordle with a screamer thrown in for the laugh.
+Wordle clone including all the most obscure words in the dictionary.
 
 
 ## Development server
