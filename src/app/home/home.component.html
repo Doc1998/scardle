@@ -1,59 +1,56 @@
 <div id="app">
-    <div class="screen" *ngIf="showScare"></div>
+  <div class="screen" *ngIf="showScare"></div>
+  <div class="title">
     <h1 class="title" style="font-family: pm;" *ngIf="!showShareBtn">
-      <span style="font-family: pm;">Scardle</span>
+      <span style="font-family: pm;">Scardle - 6X Harder Then Wordle</span>
     </h1>
-    <h4 class="title">
-        <span style="color: red;">6x</span> Harder than Wordle. Only <span style="color: red;">21%</span> of people can win this game
-      </h4>
-    <h5 class="title"><span style="color: red;" *ngIf="!showShareBtn">TURN SOUND ON</span></h5>
-    <h3 class="title" *ngIf="!showShareBtn">
+  </div>
+
+  <div class="center" *ngIf="!showShareBtn">
+    <div class="grid">
+      <div class="letter-cell" *ngFor="let cell of grid">
+        <h3 style="font-family: Arial, Helvetica, sans-serif;">{{ cell }}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="jumpscare" *ngIf="showScare"></div>
+  <div class="keyboard" *ngIf="!showShareBtn">
+    <div class="center" *ngFor="let row of keyboard">
+      <button
+        class="keyboard-button"
+        *ngFor="let key of row"
+        (click)="pressKey(key)"
+      >
+        <h3>{{ key }}</h3>
+      </button>
+    </div>
+  </div>
+
+  <div class="popup" [hidden]="hidePopup">
+    <div class="window">
+      <h1 class="title">{{ gameState }}</h1>
+      <h1>{{ wordLost }}</h1>
+      <button (click)="newGame()">New Game</button>
+    </div>
+  </div>
+  <h3 class="title" *ngIf="!showShareBtn">
+    <a
+      style="padding:3px; border-radius: 5px; cursor: pointer; color: white; background-color: blue;"
+      (click)="share()"
+      >SHARE</a
+    >
+  </h3>
+  <div class="endGame" *ngIf="showShareBtn">
+    <h3 class="title">
       <a
-        style="padding:3px; border-radius: 5px; cursor: pointer; color: white; background-color: blue;"
-        (click)="share()"
-        >SHARE</a
+        style="padding:3px; border-radius: 5px; cursor: pointer; color: white; background-color: blue; cursor: pointer;display: flex;
+      justify-content: center;"
+        (click)="shareResult()"
+        >SHARE YOUR SCORE AND STOP THE SCREAMING</a
       >
     </h3>
-  
-    <div class="center" *ngIf="!showShareBtn">
-      <div class="grid">
-        <div class="letter-cell" *ngFor="let cell of grid">
-          <h3 style="font-family: Arial, Helvetica, sans-serif;">{{ cell }}</h3>
-        </div>
-      </div>
-    </div>
-    <div class="jumpscare" *ngIf="showScare"></div>
-    <div class="keyboard" *ngIf="!showShareBtn">
-      <div class="center" *ngFor="let row of keyboard">
-        <button
-          class="keyboard-button"
-          *ngFor="let key of row"
-          (click)="pressKey(key)"
-        >
-          <h3>{{ key }}</h3>
-        </button>
-      </div>
-    </div>
-  
-    <div class="popup" [hidden]="hidePopup">
-      <div class="window">
-        <h1 class="title">{{ gameState }}</h1>
-        <h1>{{wordLost}}</h1>
-        <button (click)="newGame()">New Game</button>
-      </div>
-    </div>
-    <div class="endGame" *ngIf="showShareBtn">
-      <h3 class="title">
-        <a
-          style="padding:3px; border-radius: 5px; cursor: pointer; color: white; background-color: blue; cursor: pointer;display: flex;
-      justify-content: center;"
-          (click)="shareResult()"
-          >SHARE YOUR SCORE AND STOP THE SCREAMING</a
-        >
-      </h3>
-    </div>
-    <footer *ngIf="!showShareBtn">
-        <small>Contact: Acutisdev@gmail.com</small>
-    </footer>
   </div>
-  
+  <footer *ngIf="!showShareBtn">
+    <small>Created by: <a style="color: blue">IrelandWebDesigns</a></small>
+  </footer>
+</div>

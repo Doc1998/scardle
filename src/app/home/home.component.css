@@ -1,198 +1,204 @@
 .center {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .title {
-    text-align: center;
-    padding: 0.1rem;
-    font-family: poppins-bold;
-  }
-  .screen {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+  padding: 0.1rem;
+  font-family: poppins-bold;
+}
+h1 {
+  font-size: 1.5em;
+}
+h3,
+h4 {
+  font-size: 1.2em;
+}
+.screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+.keyboard {
+  display: block;
+  padding-top: 4rem;
+  width: fit-content;
+  margin: auto;
+  font-family: poppins;
+}
+.jumpscare {
+  background: url(https://thumbs.gfycat.com/CautiousSizzlingAmericancreamdraft-size_restricted.gif)
+    center no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: 700px Auto;
+  z-index: 0;
+}
+.endGame {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: 700px Auto;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  text-transform: capitalize;
+  background-color: #23272a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+.letter-cell {
+  display: inline-flex;
+
+  border: 1px solid grey;
+
+  width: 1.9rem;
+  height: 1.9rem;
+
+  text-transform: capitalize;
+
+  margin: 4px;
+
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  background-color: white;
+  text-align: center;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.gray {
+  background-color: darkgray;
+}
+
+.keyboard-button {
+  display: inline-flex;
+
+  cursor: pointer;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 5px;
+
+  outline-style: none;
+  text-transform: capitalize;
+  color: white;
+  margin: 4px;
+
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.keyboard-button:hover {
+  background-color: rgb(92, 92, 92);
+}
+
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000088;
+}
+
+.popup .window {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 35%;
+  background-color: white;
+  color: black;
+  font-family: poppins;
+  width: 22rem;
+  height: 15rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.window button {
+  text-transform: capitalize;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0 1rem;
+  border-color: blue;
+  font-family: poppins;
+}
+footer {
+  font-family: poppins-bold;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+@media (min-width: 1px) and (max-width: 819px) {
+  .keyboard-button {
+    height: 2.5rem;
+    width: 1.6rem;
   }
   .keyboard {
-    display: block;
-    padding-top: 4rem;
-    width: fit-content;
-    margin: auto;
-    font-family: poppins;
+    padding-top: 2px;
   }
-  .jumpscare {
-    background: url(https://thumbs.gfycat.com/CautiousSizzlingAmericancreamdraft-size_restricted.gif)
-      center no-repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-size: 700px Auto;
-    z-index: 0;
-  }
-  .endGame{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-size: 700px Auto;
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  button {
-    text-transform: capitalize;
-    background-color: #23272a;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-  }
-  
   .letter-cell {
-    display: inline-flex;
-  
-    border: 1px solid grey;
-  
-    width: 2.7rem;
-    height: 2.7rem;
-  
-    text-transform: capitalize;
-  
-    margin: 4px;
-  
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    background-color: white;
-    text-align: center;
+    width: 2.2rem;
+    height: 2.2rem;
   }
-  
-  .blue {
-    background-color: blue;
+  h1 {
+    font-size: 1.5em;
   }
-  
-  .orange {
-    background-color: orange;
+  h4 {
+    display: none;
   }
-  
-  .red {
-    color: red;
+  h3 {
+    font-size: 1em;
   }
-  
-  .gray {
-    background-color: darkgray;
+  h5 {
+    font-size: 0.67em;
   }
-  
-  .keyboard-button {
-    display: inline-flex;
-  
-    cursor: pointer;
-  
-    width: 2.5rem;
-    height: 2.5rem;
-  
-    border-radius: 5px;
-  
-    outline-style: none;
-    text-transform: capitalize;
-    color: white;
-    margin: 4px;
-  
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-  }
-  .keyboard-button:hover {
-    background-color: rgb(92, 92, 92);
-  }
-  
-  .popup {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #00000088;
-  }
-  
-  .popup .window {
-    position: absolute;
-    transform: translateX(-50%) translateY(-50%);
-    left: 50%;
-    top: 35%;
-    background-color: white;
-    color: black;
-    font-family: poppins;
-    width: 22rem;
-    height: 15rem;
-    text-align: center;
-    border-radius: 5px;
-  }
-  .window button {
-    text-transform: capitalize;
-    padding:5px; 
-    border-radius: 5px; 
-    cursor: pointer;
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    padding: 1rem;
-    margin: 0 1rem;
-    border-color: blue;
-    font-family: poppins;
-  }
-  footer{
-      font-family: poppins-bold;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-  }
-  @media (min-width: 1px) and (max-width: 819px) {
-    .keyboard-button {
-      height: 2.5rem;
-      width: 1.6rem;
-    }
-    .keyboard {
-      padding-top: 2px;
-    }
-    .letter-cell{
-        width: 2.2rem;
-        height: 2.2rem;
-    }
-    h1{
-       font-size: 1.5em;  
-    }
-    h4{
-        display: none;
-    }
-    h3{
-        font-size: 1em;
-    }
-    h5{
-        font-size: .67em;
-    }
-  }
-  
-  @font-face {
-    font-family: 'poppins';
-    src: url('/assets/Poppins-Medium.ttf');
-  }
-  @font-face {
-    font-family: 'poppins-bold';
-    src: url('/assets/Poppins-Bold.ttf');
-  }
-  @font-face {
-    font-family: 'pm';
-    src: url('/assets/PermanentMarker-Regular.ttf');
-  }
-  
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('/assets/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: 'poppins-bold';
+  src: url('/assets/Poppins-Bold.ttf');
+}
+@font-face {
+  font-family: 'pm';
+  src: url('/assets/PermanentMarker-Regular.ttf');
+}

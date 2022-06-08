@@ -20,14 +20,14 @@ export class HomeComponent implements OnInit {
     ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', '⏎'],
     ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
   ];
-  currentDay = Math.round(Math.random() * Days.length);
+  currentDay = Math.round(Math.random() * Valid.length);
   row = 0;
   hidePopup = true;
   gameState = 'Error';
   validInput = 'abcdefghijklmnopqrstuvwxyz⌫⏎';
   showScare = false;
   showShareBtn = false;
-  word = Days[this.currentDay];
+  word = Valid[this.currentDay];
   rowOne = '';
   rowTwo = '';
   rowThree = '';
@@ -42,8 +42,7 @@ export class HomeComponent implements OnInit {
   wordLost = '';
   ngOnInit(): void {
     document.addEventListener('keydown', (e) =>
-      this.pressKey(e.key.toString()
-      )
+      this.pressKey(e.key.toString())
     );
     // console.log(Days[this.currentDay]);
   }
@@ -100,16 +99,16 @@ export class HomeComponent implements OnInit {
       }
 
       if (guess == wordchosen) {
-        //this.hidePopup = false;
-        this.showScare = true;
-        this.scream();
+        this.hidePopup = false;
+        // this.showScare = true;
+        //this.scream();
         this.gameState = 'You Win!';
       } else {
         this.row++;
         if (this.row == 6) {
           this.hidePopup = false;
           this.gameState = 'You Lost!';
-          this.wordLost =  'The word was' + ' ' + wordchosen;
+          this.wordLost = 'The word was' + ' ' + wordchosen;
         }
       }
     } else {
@@ -179,7 +178,7 @@ export class HomeComponent implements OnInit {
   }
   share() {
     navigator.clipboard.writeText(
-      'Only 21% of people can win this extreme version of Wordle. Play now to see if you have the brains to compete : https://scardle.com '
+      'Wordle including the most obscure and hardest words. Play now to see if you have the brains to compete : https://scardle.com '
     );
     this.toastr.success('Copied to clipboard');
   }
@@ -205,7 +204,7 @@ export class HomeComponent implements OnInit {
   }
   shareResult() {
     navigator.clipboard.writeText(
-        this.outputlineOne +
+      this.outputlineOne +
         '\n' +
         '\t' +
         this.outputlineTwo +
